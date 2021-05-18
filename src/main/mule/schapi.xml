@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="schapiFlow" doc:id="18b68b27-b12e-4e4f-b75e-7e9344800d7c" >
+		<scheduler doc:name="Scheduler" doc:id="73260868-25ff-4dcc-96e9-53439d0b42f8" >
+			<scheduling-strategy >
+				<cron expression="0 0 15 ? * *" timeZone="IST"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="a4f0de57-25b5-4b77-a9e7-0bddec712350" message='#["HLO"]'/>
+	</flow>
+</mule>
